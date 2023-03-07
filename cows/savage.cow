@@ -1,0 +1,25 @@
+# Macho Man Randy Savage
+# 2023 Jeff Pottruff <jeffpottruff@gmail.com>
+$the_cow = <<EOF
+  $thoughts
+   \\               ..;;;;;;;;;..                                                       
+    \\            ,oOOOOOOOOOOOOOo,                                                    
+     \\         .oOOOOOOOOOOOOOOOOOo.                                                  
+      \\       .OOOOOOOOOOOOOOOOOOOOOO.                                                 
+       \\     .OOOOO0OOOOOOOOOOOOOOOOOO.                                                 
+        \\   ./~~~~~~~~~~~~~~~~~~~~~~~~\\-------,,                                            
+           ./~~~~~~~~~~~~~~~~~~~~~~~~~~\\,.__  .'                                        
+          .uuu xXXXXXXXXXXXXXXXXXXXXx uuu.  \\/                                           
+         .uUU xXXXXXXXXXXXXXXXXXXXXXXx UUu.                                            
+         'UUU XXXXXXXXXXXXXXXXXXXXXXXX UUU''                                            
+         ,UUU xXXXXXXXXX.  .XXXXXXXXXx UUU'.                                            
+        .UUUUU  xxxxxx,      ,xxxxxxx uUUUUU.                                           
+       .UUUUUUU'       ..  ..        ,UUUUUUU.                                           
+       .UUUUUUUU:    /MMMMMMMM\\     :UUUUUUUUU,                                         
+       ,UUUUUUUUU:  /MM      MM\\   :UUUUUUUUU,                                          
+       ;UUUUU:  MMMMM:        :MMMMM  :UUUUU;                                          
+               .wWWWWWW......WWWWWWw.                                                  
+                  .:wWWWWWWWWWWWw:.                                                     
+                      .';wWw;'.  
+EOF
+
