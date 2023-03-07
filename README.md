@@ -25,7 +25,7 @@ savagesay() {
 ```
 ## Prereqs
 
-Install fortune, cowsay, and lolcat
+Install fortune, cowsay, and the optional _(but recommended)_ dependencies 
 
 ```bash
 # Required
@@ -38,14 +38,14 @@ sudo apt install figlet
 ```
 
 ## Initial Setup
-1. Copy the `savage-fortunes` and `savage-fortunes.dat` from project to the **fortunes directory** on your distro
+1. Copy `savage-fortunes` and `savage-fortunes.dat` from project to the **fortunes directory** on your distro
 
     ```bash
     cd ./fortunes
     cp savage-fortunes savage-fortunes.dat /usr/share/games/fortunes
     ```
 
-    You should now be able to run them from any directory and see them in the list of available fortunes
+    _You should now be able to run them from any directory and see them in the list of available fortunes_
 
     ```bash
     # Check the file exists in the fortunes directory
@@ -54,7 +54,7 @@ sudo apt install figlet
     # Generate a savage fortune
     fortune savage-fortunes
     ```
-1. Copy the `savage.cow` from the project to the **cows directory** on your distro
+1. Copy `savage.cow` from the project to the **cows directory** on your distro
 
     ```bash
     cd ./cows
@@ -64,17 +64,18 @@ sudo apt install figlet
 ## Editing the fortunes
 The quotes can be edited as you like but you will need to generate a new `.dat` file. 
 
-_NOTE: if editing the file directly in `/usr/share/games/fortunes/savage-fortunes`, simply generate/replace `.dat` there._
+_NOTE: if you're editing the file directly in `/usr/share/games/fortunes/savage-fortunes`, you can simply generate/replace `.dat` there._
 
-_If editing copies of the files that are stored elsewhere, you will need to replace the stale files in the fortunes directory with the new ones_
+_If you're editing copies of the files that are stored elsewhere, you will need to replace the stale files in the fortunes directory with the new ones_
 
 ```bash
+# Generate a .dat file
 strfile -c % savage-fortunes savage-fortunes.dat
 ```
 ## Editing the cow
 Make changes to the `.cow` file directly or use the included ascii art in the project. 
 
-Information on how to create _new_ cows can be found in article in the resources section. 
+Information on how to create new cows can be found in article in the resources section. 
 
 ## Resources
 [Fortune](https://linux.die.net/man/6/fortune)
