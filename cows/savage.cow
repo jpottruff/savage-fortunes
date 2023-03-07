@@ -1,6 +1,7 @@
 # Macho Man Randy Savage
 # 2023 Jeff Pottruff <jeffpottruff@gmail.com>
 $the_cow = <<EOF
+
   $thoughts
    \\               ..;;;;;;;;;..                                                       
     \\            ,oOOOOOOOOOOOOOo,                                                    
@@ -21,5 +22,6 @@ $the_cow = <<EOF
                .wWWWWWW......WWWWWWw.                                                  
                   .:wWWWWWWWWWWWw:.                                                     
                       .';wWw;'.  
+
 EOF
 
