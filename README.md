@@ -1,4 +1,9 @@
-# Savage Fortunes
+<p align="center">
+  <a href="https://github.com/jpottruff/savage-fortunes">
+    <img src="./logo-banner.png" alt="Savage Fortunes Logo" width="240" height="240">
+  </a>
+</p>
+
 
 ### Basic Commands 
 
