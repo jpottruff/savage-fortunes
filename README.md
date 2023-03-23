@@ -5,8 +5,8 @@
 </p>
 
 
-### Basic Commands 
-
+### Basic Command Examples 
+Utilize basic [fortune](https://linux.die.net/man/6/fortune) and [cowsay](https://linux.die.net/man/1/cowsay) commands
 ```bash
 # Generate a basic savage fortune
 fortune savage-fortunes
@@ -17,7 +17,8 @@ cowsay -f savage <my things to say>
 # Get a fortune from the Macho Man himself
 fortune savage-fortunes | cowsay -f savage
 ```
-_Create some aliases and go nuts_
+### Alias Examples 
+...or create some aliases
 
 ```bash
 # ascii Macho Man tells you a fortune
@@ -28,6 +29,22 @@ savagesay() {
   figlet -k $@ | cowsay -f savage -n | lolcat
 }
 ```
+# Setup (Script)
+
+> ⚠️**Warning: USE AT YOUR OWN RISK**⚠️
+>
+> Full disclosure - bash scripts are **not** something I write very often. 
+> 
+> It pretty much just automates the manual setup steps below, but maybe go over it first to make sure it won't ruin your day.
+
+You can run the [install script](https://github.com/jpottruff/savage-fortunes/blob/main/setup.sh) by downloading it or run from the command line using:
+
+```bash
+curl -o savage-setup.sh https://raw.githubusercontent.com/jpottruff/savage-fortunes/main/setup.sh && bash ./savage-setup.sh
+```
+_NOTE: Running the script will give you the **option** to append a couple aliases to either `.bash_aliases` or `.bashrc` that function similar to the alias examples above._
+# Setup (Manual)
+
 ## Prereqs
 
 Install fortune, cowsay, and the optional _(but recommended)_ dependencies 
