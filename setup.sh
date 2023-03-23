@@ -171,6 +171,14 @@ else
     command printf "\\nNot appending aliases\\n\\n"
 fi
 
+## Clean up
+SETUP_FILE=./savage-setup.sh
+if [ -f "$SETUP_FILE" ]; then
+    command printf "Cleaning up setup file\\n"
+    command rm -rf $SETUP_FILE
+    command printf "Done\\n\\n"
+fi
+
 ## Exit Messages
 if [ "$OPT_DEPS_INSTALLED" = true ]; then
     command figlet -k "All done" | command cowsay -f savage -n | command lolcat
@@ -179,7 +187,11 @@ else
 fi;
 
 if [ "$ALIASES_APPENDED" = true ]; then 
-    command printf "Please reload bash to start using the alaises added in $FILE_TO_APPEND\\n\\n"
+    command printf "Please reload bash to start using the alaises added in $FILE_TO_APPEND\\n"
+else 
+    command printf "No alaises added.\\n"
 fi;
+
+command printf "Command examples can be found at https://github.com/jpottruff/savage-fortunes#basic-command-examples\\n\\n"
 
 exit 0
