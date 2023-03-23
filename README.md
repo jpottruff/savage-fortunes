@@ -18,7 +18,7 @@ cowsay -f savage <my things to say>
 fortune savage-fortunes | cowsay -f savage
 ```
 ### Alias Examples 
-...or create some aliases
+Or create some aliases
 
 ```bash
 # ascii Macho Man tells you a fortune
