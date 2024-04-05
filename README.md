@@ -4,6 +4,89 @@
   </a>
 </p>
 
+# Setup (Script)
+
+You can download and run the [setup script](https://github.com/jpottruff/savage-fortunes/blob/main/setup.sh) **or** simply run the following command in a terminal:
+
+```bash
+curl -o savage-setup.sh https://raw.githubusercontent.com/jpottruff/savage-fortunes/main/setup.sh && bash ./savage-setup.sh
+```
+_NOTE: Running the script will give you the **option** to append a couple pre-configured aliases to either `.bash_aliases` or `.bashrc`_
+
+⚠️ If you'd prefer not to run the script, manual setup steps can be found in the appendix.
+
+# Usage
+If you ran the setup script and installed the pre-configured aliases, you're good to go. 
+
+You can now use:
+
+- `savagefortune` to have ascii Macho Man tell you a random fortune
+
+- `savagesay` the same way you would use _cowsay_
+
+```bash
+# ALIAS 1
+user@laptop ~$ savagefortune
+ ________________________________________
+/ Let me tell you now a man of my        \
+| position can afford to look ridiculous |
+\ at any time.                           /
+ ----------------------------------------
+
+  \
+   \               ..;;;;;;;;;..
+    \            ,oOOOOOOOOOOOOOo,
+     \         .oOOOOOOOOOOOOOOOOOo.
+      \       .OOOOOOOOOOOOOOOOOOOOOO.
+       \     .OOOOO0OOOOOOOOOOOOOOOOOO.
+        \   ./~~~~~~~~~~~~~~~~~~~~~~~~\-------,,
+           ./~~~~~~~~~~~~~~~~~~~~~~~~~~\,.__  .'
+          .uuu xXXXXXXXXXXXXXXXXXXXXx uuu.  \/
+         .uUU xXXXXXXXXXXXXXXXXXXXXXXx UUu.
+         'UUU XXXXXXXXXXXXXXXXXXXXXXXX UUU''
+         ,UUU xXXXXXXXXX.  .XXXXXXXXXx UUU'.
+        .UUUUU  xxxxxx,      ,xxxxxxx uUUUUU.
+       .UUUUUUU'       ..  ..        ,UUUUUUU.
+       .UUUUUUUU:    /MMMMMMMM\     :UUUUUUUUU,
+       ,UUUUUUUUU:  /MM      MM\   :UUUUUUUUU,
+       ;UUUUU:  MMMMM:        :MMMMM  :UUUUU;
+               .wWWWWWW......WWWWWWw.
+                  .:wWWWWWWWWWWWw:.
+                      .';wWw;'.
+
+# ALIAS 2
+user@laptop ~$ savagesay ohhhh yeah!
+ ____________________________________________________________________
+/         _      _      _      _                           _      _  \
+|   ___  | |__  | |__  | |__  | |__    _   _   ___   __ _ | |__  | | |
+|  / _ \ | '_ \ | '_ \ | '_ \ | '_ \  | | | | / _ \ / _` || '_ \ | | |
+| | (_) || | | || | | || | | || | | | | |_| ||  __/| (_| || | | ||_| |
+|  \___/ |_| |_||_| |_||_| |_||_| |_|  \__, | \___| \__,_||_| |_|(_) |
+\                                      |___/                         /
+ --------------------------------------------------------------------
+
+  \
+   \               ..;;;;;;;;;..
+    \            ,oOOOOOOOOOOOOOo,
+     \         .oOOOOOOOOOOOOOOOOOo.
+      \       .OOOOOOOOOOOOOOOOOOOOOO.
+       \     .OOOOO0OOOOOOOOOOOOOOOOOO.
+        \   ./~~~~~~~~~~~~~~~~~~~~~~~~\-------,,
+           ./~~~~~~~~~~~~~~~~~~~~~~~~~~\,.__  .'
+          .uuu xXXXXXXXXXXXXXXXXXXXXx uuu.  \/
+         .uUU xXXXXXXXXXXXXXXXXXXXXXXx UUu.
+         'UUU XXXXXXXXXXXXXXXXXXXXXXXX UUU''
+         ,UUU xXXXXXXXXX.  .XXXXXXXXXx UUU'.
+        .UUUUU  xxxxxx,      ,xxxxxxx uUUUUU.
+       .UUUUUUU'       ..  ..        ,UUUUUUU.
+       .UUUUUUUU:    /MMMMMMMM\     :UUUUUUUUU,
+       ,UUUUUUUUU:  /MM      MM\   :UUUUUUUUU,
+       ;UUUUU:  MMMMM:        :MMMMM  :UUUUU;
+               .wWWWWWW......WWWWWWw.
+                  .:wWWWWWWWWWWWw:.
+                      .';wWw;'.
+
+```
 
 ### Basic Command Examples 
 Utilize basic [fortune](https://linux.die.net/man/6/fortune) and [cowsay](https://linux.die.net/man/1/cowsay) commands
@@ -17,7 +100,7 @@ cowsay -f savage <my things to say>
 # Get a fortune from the Macho Man himself
 fortune savage-fortunes | cowsay -f savage
 ```
-### Alias Examples 
+### Custom Alias Examples 
 Or create some aliases
 
 ```bash
@@ -29,23 +112,12 @@ savagesay() {
   figlet -k $@ | cowsay -f savage -n | lolcat
 }
 ```
-# Setup (Script)
 
-> ⚠️**Warning: USE AT YOUR OWN RISK**⚠️
->
-> Full disclosure - bash scripts are **not** something I write very often. 
-> 
-> It pretty much just automates the manual setup steps below, but maybe go over it first to make sure it won't ruin your day.
 
-You can run the [install script](https://github.com/jpottruff/savage-fortunes/blob/main/setup.sh) by downloading it or run from the command line using:
+# Appendix 
+## Setup (Manual)
 
-```bash
-curl -o savage-setup.sh https://raw.githubusercontent.com/jpottruff/savage-fortunes/main/setup.sh && bash ./savage-setup.sh
-```
-_NOTE: Running the script will give you the **option** to append a couple aliases to either `.bash_aliases` or `.bashrc` that function similar to the alias examples above._
-# Setup (Manual)
-
-## Prereqs
+### Prereqs
 
 Install fortune, cowsay, and the optional _(but recommended)_ dependencies 
 
@@ -54,12 +126,12 @@ Install fortune, cowsay, and the optional _(but recommended)_ dependencies
 sudo apt install fortune
 sudo apt install cowsay
 
-# Optional (used in demo alias / function above)
+# Optional (for pretty colors and text formatting)
 sudo apt install lolcat
 sudo apt install figlet
 ```
 
-## Initial Setup
+### Initial Setup
 1. Copy `savage-fortunes` and `savage-fortunes.dat` from project to the **fortunes directory** on your distro
 
     ```bash
@@ -83,7 +155,7 @@ sudo apt install figlet
     cp savage.cow /usr/share/cowsay/cows
     ```
 
-## Editing the fortunes
+### Editing the fortunes
 The quotes can be edited as you like but you will need to generate a new `.dat` file. 
 
 _NOTE: if you're editing the file directly in `/usr/share/games/fortunes/savage-fortunes`, you can simply generate/replace `.dat` there._
@@ -94,7 +166,7 @@ _If you're editing copies of the files that are stored elsewhere, you will need 
 # Generate a .dat file
 strfile -c % savage-fortunes savage-fortunes.dat
 ```
-## Editing the cow
+### Editing the cow 
 Make changes to the `.cow` file directly or use the included ascii art in the project. 
 
 Information on how to create new cows can be found in article in the resources section. 
